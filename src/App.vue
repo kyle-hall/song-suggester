@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <todo-list></todo-list>
+    <song-list></song-list>
   </div>
 </template>
 
 <script>
-import TodoList from '@/components/TodoList';
+import SongList from '@/components/SongList';
 
 export default {
   name: 'app',
   components: {
-    TodoList
+    SongList
   }
 };
 </script>
