@@ -10,19 +10,6 @@
 
 <script>
     export default {
-        data() {
-            return {
-                songs: [
-                    'Legend of Zelda Theme',
-                    'Under the Bridge',
-                    'One Step Closer',
-                    'White Winter Hymnal'
-                ]
-            }
-        }
+        props: ['songs']
     };
 </script>
-
-<style scoped>
-
-</style>
