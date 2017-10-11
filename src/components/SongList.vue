@@ -1,15 +1,20 @@
 <template>
-    <div class="todo">
-        <h1>Song A</h1>
+    <div class="songs">
+        <ul class="list pl0">
+            <li class="song" :key="song.title" v-for="song in songs">
+                <song :song="song"></song>
+            </li>
+        </ul>
     </div>
 </template>
 
 <script>
+    import Song from '@/components/Song'
+
     export default {
-        
+        components: {
+            Song
+        },
+        props: ['songs']
     };
 </script>
-
-<style scoped>
-
-</style>
