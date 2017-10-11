@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <song-list></song-list>
+    <song-list :songs="songs"></song-list>
   </div>
 </template>
 
@@ -12,6 +12,16 @@ export default {
   name: 'app',
   components: {
     SongList
+  },
+  data() {
+    return {
+      songs: [
+        { title: 'Legend of Zelda Theme' },
+        { title: 'Under the Bridge' },
+        { title: 'One Step Closer' },
+        { title: 'White Winter Hymnal'}
+      ]
+    }
   }
 };
 </script>
