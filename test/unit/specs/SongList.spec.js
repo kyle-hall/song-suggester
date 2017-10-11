@@ -4,21 +4,24 @@ import SongList from '@/components/SongList';
 
 describe('SongList.vue', () => {
     const songs = [
-        'Legend of Zelda Theme',
-        'Under the Bridge',
-        'One Step Closer',
-        'White Winter Hymnal'
-    ]
+        { title: 'Legend of Zelda Theme' },
+        { title: 'Under the Bridge' },
+        { title: 'One Step Closer' },
+        { title: 'White Winter Hymnal'}
+      ];
 
     it('should render a song', () => {
         const Constructor = Vue.extend(SongList);
         const vm = new Constructor({
-                propsData: {
-                    songs: songs
-                }  
-            }).$mount();
-        expect(vm.$el.querySelector('li:first-child').textContent)
-            .to.equal('Legend of Zelda Theme');
+            propsData: {
+                songs: songs
+            }  
+        }).$mount();
+        const expected = vm.songs[0].title;
+
+        const actual = vm.$el.querySelector('li:first-child').textContent;
+
+        expect(actual).to.equal(expected);
     });
 
     it('should render a song for each element in the song list', () => {
@@ -28,9 +31,25 @@ describe('SongList.vue', () => {
                 songs: songs
             }
         }).$mount();
-        expect(vm.$el.querySelectorAll('.song').length)
-            .to.equal(vm.songs.length);
+        const expected = vm.songs.length;
+
+        const actual = vm.$el.querySelectorAll('.song').length;
+
+        expect(actual).to.equal(expected);
     });
 
+    it('should render a song with a title', () => {
+        const Constructor = Vue.extend(SongList);
+        const vm = new Constructor({
+            propsData: {
+                songs: songs
+            }
+        }).$mount();
+        const expected = vm.songs[0].title;
 
+        const actual = vm.$el.querySelectorAll('.song')[0].textContent;
+
+        expect(actual).to.equal(expected);
+    });
+    
 });

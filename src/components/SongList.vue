@@ -1,15 +1,20 @@
 <template>
     <div class="songs">
-        <ul>
-            <li class="song" :key="song" v-for="song in songs">
-                <h3>{{ song }}</h3>
+        <ul class="list pl0">
+            <li class="song" :key="song.title" v-for="song in songs">
+                <song :song="song"></song>
             </li>
         </ul>
     </div>
 </template>
 
 <script>
+    import Song from '@/components/Song'
+
     export default {
+        components: {
+            Song
+        },
         props: ['songs']
     };
 </script>
