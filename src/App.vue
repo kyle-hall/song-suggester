@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import SongList from '@/components/SongList';
+import SongList from '@/components/SongList'
 
 export default {
   name: 'app',
