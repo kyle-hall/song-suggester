@@ -16,10 +16,10 @@ export default {
   data() {
     return {
       songs: [
-        { title: 'Legend of Zelda Theme' },
-        { title: 'Under the Bridge' },
-        { title: 'One Step Closer' },
-        { title: 'White Winter Hymnal'}
+        { title: 'Legend of Zelda Theme', learned: false },
+        { title: 'Under the Bridge', learned: false },
+        { title: 'One Step Closer', learned: false },
+        { title: 'White Winter Hymnal', learned: false}
       ]
     }
   }

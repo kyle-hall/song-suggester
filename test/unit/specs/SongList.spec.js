@@ -4,10 +4,10 @@ import SongList from '@/components/SongList';
 
 describe('SongList.vue', () => {
     const songs = [
-        { title: 'Legend of Zelda Theme' },
-        { title: 'Under the Bridge' },
-        { title: 'One Step Closer' },
-        { title: 'White Winter Hymnal'}
+        { title: 'Legend of Zelda Theme', learned: true },
+        { title: 'Under the Bridge', learned: false },
+        { title: 'One Step Closer', learned: false },
+        { title: 'White Winter Hymnal', learned: false}
       ];
 
     it('should render a song', () => {
@@ -48,6 +48,20 @@ describe('SongList.vue', () => {
         const expected = vm.songs[0].title;
 
         const actual = vm.$el.querySelectorAll('.song')[0].textContent;
+
+        expect(actual).to.equal(expected);
+    });
+
+    it('should render something showing a song has been learned', () => {
+        const Constructor = Vue.extend(SongList);
+        const vm = new Constructor({
+            propsData: {
+                songs: songs
+            }
+        }).$mount();
+        const expected = true;
+
+        const actual = vm.$el.querySelectorAll('.song h3')[0].classList.contains('bg-light-green');
 
         expect(actual).to.equal(expected);
     });
