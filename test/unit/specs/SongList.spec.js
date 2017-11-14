@@ -2,7 +2,7 @@
 import Vue from 'vue';
 import SongList from '@/components/SongList';
 
-describe('SongList.vue', () => {
+describe('SongList', () => {
     const songs = [
         { title: 'Legend of Zelda Theme', learned: true },
         { title: 'Under the Bridge', learned: false },
@@ -61,7 +61,7 @@ describe('SongList.vue', () => {
         }).$mount();
         const expected = true;
 
-        const actual = vm.$el.querySelectorAll('.song h3')[0].classList.contains('bg-light-green');
+        const actual = vm.$el.querySelectorAll('.song h3')[0].classList.contains('green-border');
 
         expect(actual).to.equal(expected);
     });
