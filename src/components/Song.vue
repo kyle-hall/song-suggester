@@ -1,10 +1,10 @@
 <template>
-    <div class="song">
+    <div>
         <div v-if="song.learned">
-            <h3 class="ba green-border bw2 mw5 center pa5">{{ song.title }}</h3>
+            <h3 class="song green-border mw7 center pa5">{{ song.title }}</h3>
         </div>
         <div v-else>
-            <h3 class="ba red-border bw2 mw5 center pa5">{{ song.title }}</h3>
+            <h3 class="song red-border mw7 center pa5">{{ song.title }}</h3>
         </div>
     </div>
     

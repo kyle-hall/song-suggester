@@ -1,11 +1,16 @@
 
+body, h3 {
+    font-family: "Courier New", sans-serif;
+}
+
 .bg-soft-white {
-    background-color: #e5e5e5;
+    background-color: #E5E5E5;
 }
 
 .song {
     border-radius: 8px;
     box-shadow: 5px 5px 10px 2px #A9A9A9;
+    background-color: #EFE9E9;
 }
 
 .green-border {
