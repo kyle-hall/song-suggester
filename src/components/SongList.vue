@@ -1,7 +1,7 @@
 <template>
     <div class="songs">
         <ul class="list pl0">
-            <li class="song" :key="song.title" v-for="song in songs">
+            <li :key="song.title" v-for="song in songs">
                 <song :song="song"></song>
             </li>
         </ul>
