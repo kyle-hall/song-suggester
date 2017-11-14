@@ -2,3 +2,16 @@
 .bg-soft-white {
     background-color: #e5e5e5;
 }
+
+.song {
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px 2px #A9A9A9;
+}
+
+.green-border {
+    border: 5px solid #383;
+}
+
+.red-border {
+    border: 5px solid #A13;
+}
