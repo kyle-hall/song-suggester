@@ -13,10 +13,12 @@ body, h1, h3 {
     background-color: #EFE9E9;
 }
 
-.green-border {
+.learned {
     border: 5px solid #383;
+    background-color: #dbf9dd;
 }
 
-.red-border {
+.not-learned {
     border: 5px solid #A13;
+    background-color: #FFE9E9;    
 }
