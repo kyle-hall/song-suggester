@@ -8,7 +8,7 @@ describe('SongList', () => {
         { title: 'Under the Bridge', learned: false },
         { title: 'One Step Closer', learned: false },
         { title: 'White Winter Hymnal', learned: false}
-      ];
+    ];
 
     it('should render a song', () => {
         const Constructor = Vue.extend(SongList);
@@ -47,7 +47,7 @@ describe('SongList', () => {
         }).$mount();
         const expected = vm.songs[0].title;
 
-        const actual = vm.$el.querySelectorAll('.song')[0].textContent;
+        const actual = vm.$el.querySelector('.song:first-child').textContent;
 
         expect(actual).to.equal(expected);
     });
@@ -61,7 +61,7 @@ describe('SongList', () => {
         }).$mount();
         const expected = true;
 
-        const actual = vm.$el.querySelectorAll('.song h3')[0].classList.contains('green-border');
+        const actual = vm.$el.querySelector('.song:first-child').classList.contains('green-border');
 
         expect(actual).to.equal(expected);
     });
