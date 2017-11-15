@@ -1,0 +1,6 @@
+
+Songs you want to learn are listed
+Songs you want to learn can be added to the list
+Songs you learn can be marked as complete
+A song is suggested to you when you are ready to learn a new one
+Suggested song has a link to a tutorial/tab/how-to video for that song
