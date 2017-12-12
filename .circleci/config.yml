@@ -36,7 +36,7 @@ jobs:
       # run tests!
       - run: yarn test
 
-      - run: istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
-      - run: codecov
+      - run: ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
+      - run: ./node_modules/.bin/codecov
 
 
